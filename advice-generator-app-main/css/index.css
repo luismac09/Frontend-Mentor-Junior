@@ -8,8 +8,7 @@
 
 @font-face {
   font-family: "Manrope";
-  src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"),
-    url("../fonts/Manrope-ExtraBold.woff") format("woff"),
+  src: url("../fonts/Manrope-ExtraBold.woff") format("woff"),
     url("../fonts/Manrope-ExtraBold.ttf") format("truetype");
 }
 html {
@@ -52,6 +51,7 @@ body {
 }
 .advice__dice {
   position: absolute;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,11 +59,15 @@ body {
   height: 60px;
   background-color: var(--neongreen);
   border-radius: 50%;
+  transition: all 0.18s ease-in-out;
+}
+.advice__dice:active {
+  box-shadow: 1px 1px 30px 3px var(--neongreen);
 }
 @media (hover: hover) {
   .advice__dice:hover {
     cursor: pointer;
-    box-shadow: 1px 1px 30px 3px var(--neongreen);
+    opacity: 90%;
   }
 }
 .dice {
