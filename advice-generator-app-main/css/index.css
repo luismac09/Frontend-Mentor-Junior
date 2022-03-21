@@ -124,8 +124,13 @@ body {
   margin-top: auto;
   text-align: center;
   font-size: 1.1rem;
+  color: var(--grayishblue);
 }
 .attribution {
   margin: 0;
   padding-bottom: 0.5em;
+}
+.attribution__link {
+  color: var(--lightcyan);
+  text-decoration: none;
 }
