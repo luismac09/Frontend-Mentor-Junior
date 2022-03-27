@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <h>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -10,206 +10,332 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Time tracking dashboard</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
     <script defer src="./src/index.js"></script>
   </head>
   <body>
     <main class="dashboard">
-      <article class="card card--top">
+      <article class="card">
         <div class="avatar">
-          <img class="avatar__image" src="images/image-jeremy.png" alt="jeremy">
-          <h1 class="title"><span class="title__text">Report for</span>Jeremy Robson</h1>
+          <img
+            class="avatar__image"
+            src="images/image-jeremy.png"
+            alt="jeremy"
+          />
+          <h1 class="title">
+            <span class="title__text">Report for </span>Jeremy Robson
+          </h1>
         </div>
-         <div class="options">
-          <p class="options__item">Daily</p>
-          <p class="options__item">Weekly</p>
-          <p class="options__item">Monthly</p>
-         </div>
+        <nav class="options">
+          <p class="options__item">
+            <a href="#daily" class="options__link">Daily</a>
+          </p>
+          <p class="options__item">
+            <a href="#weekly" class="options__link">Weekly</a>
+          </p>
+          <p class="options__item">
+            <a href="#monthly" class="options__link">Monthly</a>
+          </p>
+        </nav>
       </article>
-      <div class="pages" style="display:flex">
-        <section class="pages__daily">
-          <article class="card card--border">
-            <div>
-              <h2>Work</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>5hrs</p>
-              <p>Last day -<span>7hrs</span></p>
-            </div>
-          </article>
-          <article class="card card--border">
-            <div>
-              <h2>Play</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>1hr</p>
-              <p>Last day -<span>2hrs</span></p>
+      <div class="pages">
+        <section class="page pages__daily" id="daily">
+          <article class="card card--tracking card--work">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Work</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">5hrs</p>
+                <p class="card__prior">Last day-7hrs</p>
+              </div>
             </div>
           </article>
-          <article class="card card--border">
-            <div>
-              <h2>Study</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>0hrs</p>
-              <p>Last day -<span>1hr</span></p>
-            </div>
-          </article>
-          <article class="card card--border">
-            <div>
-              <h2>Exercise</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>1hr</p>
-              <p>Last day -<span>1hr</span></p>
+          <article class="card card--tracking card--play">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Play</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">1hr</p>
+                <p class="card__prior">Last day-2hrs</p>
+              </div>
             </div>
           </article>
-          <article class="card card--border">
-            <div>
-              <h2>Social</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>1hr</p>
-              <p>Last day -<span>3hrs</span></p>
-            </div>
-          </article>
-          <article class="card card--border">
-            <div>
-              <h2>Self Care</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>0hrs</p>
-              <p>Last day -<span>1hr</span></p>
+          <article class="card card--tracking card--study">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Study</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">0hrs</p>
+                <p class="card__prior">Last day-1hr</p>
+              </div>
             </div>
           </article>
-        </section>
-        <section class="pages__weekly">
-          <article class="card card--border">
-            <div>
-              <h2>Work</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>32hrs</p>
-              <p>Last Week -<span>36hrs</span></p>
-            </div>
-          </article>
-          <article class="card card--border">
-            <div>
-              <h2>Play</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>10hrs</p>
-              <p>Last Week -<span>8hrs</span></p>
+          <article class="card card--tracking card--exercise">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Exercise</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">1hr</p>
+                <p class="card__prior">Last day-1hr</p>
+              </div>
             </div>
           </article>
-          <article class="card card--border">
-            <div>
-              <h2>Study</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>4hrs</p>
-              <p>Last Week -<span>7hrs</span></p>
-            </div>
-          </article>
-          <article class="card card--border">
-            <div>
-              <h2>Exercise</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>4hrs</p>
-              <p>Last Week -<span>5hrs</span></p>
+          <article class="card card--tracking card--social">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Social</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">1hr</p>
+                <p class="card__prior">Last day-3hrs</p>
+              </div>
             </div>
           </article>
-          <article class="card card--border">
-            <div>
-              <h2>Social</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>5hrs</p>
-              <p>Last Week -<span>10hrs</span></p>
-            </div>
-          </article>
-          <article class="card card--border">
-            <div>
-              <h2>Self Care</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>2hrs</p>
-              <p>Last Week -<span>2hrs</span></p>
+          <article class="card card--tracking card--self-care">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Self Care</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">0hrs</p>
+                <p class="card__prior">Last day-1hr</p>
+              </div>
             </div>
           </article>
         </section>
-        <section class="pages__Monthly">
-          <article class="card card--border">
-            <div>
-              <h2>Work</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>103hrs</p>
-              <p>Last Month -<span>128hrs</span></p>
-            </div>
-          </article>
-          <article class="card card--border">
-            <div>
-              <h2>Play</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>23hrs</p>
-              <p>Last Month -<span>29hrs</span></p>
+        <section class="page pages__weekly" id="weekly">
+          <article class="card card--tracking card--work">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Work</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">32hrs</p>
+                <p class="card__prior">Last Week-36hrs</p>
+              </div>
             </div>
           </article>
-          <article class="card card--border">
-            <div>
-              <h2>Study</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>13hrs</p>
-              <p>Last Month -<span>19hrs</span></p>
-            </div>
-          </article>
-          <article class="card card--border">
-            <div>
-              <h2>Exercise</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>11hrs</p>
-              <p>Last Month -<span>18hrs</span></p>
+          <article class="card card--tracking card--play">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Play</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">10hrs</p>
+                <p class="card__prior">Last Week-8hrs</p>
+              </div>
             </div>
           </article>
-          <article class="card card--border">
-            <div>
-              <h2>Social</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
-            </div>
-            <div>
-              <p>21hrs</p>
-              <p>Last Month -<span>23hrs</span></p>
+          <article class="card card--tracking card--study">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Study</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">4hrs</p>
+                <p class="card__prior">Last Week-7hrs</p>
+              </div>
             </div>
           </article>
-          <article class="card card--border">
-            <div>
-              <h2>Self Care</h2>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis">
+          <article class="card card--tracking card--exercise">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Exercise</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">4hrs</p>
+                <p class="card__prior">Last Week-5hrs</p>
+              </div>
             </div>
-            <div>
-              <p>7hrs</p>
-              <p>Last Month -<span>11hrs</span></p>
+          </article>
+          <article class="card card--tracking card--social">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Social</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">5hrs</p>
+                <p class="card__prior">Last Week-10hrs</p>
+              </div>
+            </div>
+          </article>
+          <article class="card card--tracking card--self-care">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Self Care</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">2hrs</p>
+                <p class="card__prior">Last Week-2hrs</p>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="page pages__Monthly" id="monthly">
+          <article class="card card--tracking card--work">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Work</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">103hrs</p>
+                <p class="card__prior">Last Month-128hrs</p>
+              </div>
+            </div>
+          </article>
+          <article class="card card--tracking card--play">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Play</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">23hrs</p>
+                <p class="card__prior">Last Month-29hrs</p>
+              </div>
+            </div>
+          </article>
+          <article class="card card--tracking card--study">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Study</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">13hrs</p>
+                <p class="card__prior">Last Month-19hrs</p>
+              </div>
+            </div>
+          </article>
+          <article class="card card--tracking card--exercise">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Exercise</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">11hrs</p>
+                <p class="card__prior">Last Month-18hrs</p>
+              </div>
+            </div>
+          </article>
+          <article class="card card--tracking card--social">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Social</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">21hrs</p>
+                <p class="card__prior">Last Month-23hrs</p>
+              </div>
+            </div>
+          </article>
+          <article class="card card--tracking card--self-care">
+            <div class="card__inner">
+              <div class="card__top">
+                <h2 class="card__title">Self Care</h2>
+                <img
+                  class="card__icon"
+                  src="images/icon-ellipsis.svg"
+                  alt="icon-ellipsis"
+                />
+              </div>
+              <div class="card__bottom">
+                <p class="card__current">7hrs</p>
+                <p class="card__prior">Last Month-11hrs</p>
+              </div>
             </div>
           </article>
         </section>
