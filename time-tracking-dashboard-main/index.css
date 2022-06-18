@@ -76,32 +76,36 @@ img {
   display: block;
   font-size: 0.8rem;
 }
-.options {
+.nav {
   display: flex;
   justify-content: space-between;
   padding: 0.5em 0;
 }
-.options__item {
+.nav__item {
   flex: 1;
   text-align: center;
 }
-.options__link {
+.nav__link {
   text-decoration: none;
   color: var(--color-secondary);
 }
 @media (hover: hover) {
-  .options__link:hover {
+  .nav__link:hover {
     cursor: pointer;
     color: var(--color-primary);
   }
 }
 .pages {
-  display: flex;
-  width: 1200px;
-  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 1024px;
 }
 .page {
+  position: absolute;
   padding-bottom: 3em;
+}
+.page-daily {
+  z-index: 3;
 }
 .card--tracking {
   display: flex;
